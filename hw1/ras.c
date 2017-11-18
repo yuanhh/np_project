@@ -10,7 +10,14 @@
 
 #define BUFFERSIZE 10000
 
-int pipeNumberTable[1000][2] = {{0}};
+struct cmdQueue {
+    int rfd;
+    int pipeN;
+};
+
+struct cmdQueue cmdq[1000];
+
+int pipeNumberTable[1000][2];
 
     void
 prompt()
